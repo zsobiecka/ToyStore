@@ -30,12 +30,19 @@ layout: default
     </div>
   </div>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'product_page_viewed',
-    'product_name': '{{ page.name }}',
-    'product_id': '{{ page.identifier }}',
-   'product_price': {{ page.price }},
-  });
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'product_page_viewed',
+ 'product_name': '$product_name',
+ 'product_id': '$product_id',
+ 'product_price': $product_price,
+ });
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'add_to_cart',
+ 'product_name': '$product_name',
+ 'product_id': '$product_id',
+ 'product_price': $product_price,
+ });
 </script>
 </div>
